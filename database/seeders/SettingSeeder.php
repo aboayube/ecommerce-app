@@ -2,7 +2,7 @@
 
 namespace Database\Seeders;
 
-use App\Models\Setting;
+use App\Models\setting;
 use Illuminate\Database\Seeder;
 
 class SettingSeeder extends Seeder
@@ -20,7 +20,7 @@ class SettingSeeder extends Seeder
 
 
 
-        Setting::create([
+        setting::create([
             'name' => 'دروازه ',
             'name_en' => 'دروازه ',
             'discription' => 'دروازه ',
