@@ -34,8 +34,8 @@ class SettingSeeder extends Seeder
             'whatsapp' => 'Darwazeh@gmail.com',
             'address' => 'Darwazeh',
             'address_en' => 'Darwazeh',
-            'Terms' => 'Darwazeh',
-            'Terms_en' => 'Darwazeh',
+            'terms' => 'Darwazeh',
+            'terms_en' => 'Darwazeh',
             'who_us' => 'Darwazeh',
             'who_us_en' => 'Darwazeh',
         ]);
