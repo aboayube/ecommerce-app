@@ -1,4 +1,13 @@
 @extends('layouts.app')
+@section('title')
+<div class="app-title">
+    <div>
+        <h1><i class="fa fa-th-list"></i>تقييم المنتجات</h1>
+    </div>
+
+</div>
+
+@endsection
 @section('content')
 <div class="row">
     <div class="col-xl-12">

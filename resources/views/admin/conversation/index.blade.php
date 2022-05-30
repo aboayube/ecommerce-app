@@ -1,10 +1,15 @@
 @extends('layouts.app')
-@section('content')
+@section('title')
 <div class="app-title">
     <div>
-        <h1><i class="fa fa-th-list"></i>اقسام</h1>
+        <h1><i class="fa fa-th-list"></i>المحادثات</h1>
     </div>
+
 </div>
+
+@endsection
+@section('content')
+
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">

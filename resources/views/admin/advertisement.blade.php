@@ -1,16 +1,16 @@
 @extends('layouts.app')
-
-@section('content')
-@foreach ($errors->all() as $error)
-<li>{{ $error }}</li>
-@endforeach
-
+@section('title')
 <div class="app-title">
     <div>
-        <h1><i class="fa fa-th-list"></i>اقسام</h1>
+        <h1><i class="fa fa-th-list"></i> اعلانات</h1>
     </div>
 
 </div>
+
+@endsection
+@section('content')
+
+
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">
@@ -18,12 +18,17 @@
             <div class="card-header pb-0">
                 <div class="d-flex justify-content-between">
 
-                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة قسم</a>
+                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة اعلان</a>
                 </div>
             </div>
             <div class="card-body">
                 <div class="tile-body">
                     <div class="table-responsive">
+
+                        @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{ $error }}</div>
+                        @endforeach
+
                         <table class="table table-hover table-bordered table-arabic" id="sampleTable">
                             <thead>
                                 <tr>
@@ -70,7 +75,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content modal-content-demo">
             <div class="modal-header">
-                <h6 class="modal-title">اضافة قسم</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                <h6 class="modal-title">اضافة اعلان</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
             </div>
             <div class="modal-body">
                 <form action="{{route('admin.advertisements.store')}}" method="post" enctype="multipart/form-data">
@@ -120,7 +125,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">تعديل القسم</h5>
+                <h5 class="modal-title" id="exampleModalLabel">تعديل اعلان</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -151,7 +156,7 @@
                     </div>
                     <div class="form-group">
                         <input type="hidden" name="id" id="cat_id">
-                        <label for="recipient-name" class="col-form-label">اسم القسم:</label>
+                        <label for="recipient-name" class="col-form-label">اسم اعلان:</label>
                         <select class="form-control" name="status" id="status">
                             <option value="0">غير مفعل</option>
                             <option value="1">مفعل</option>
@@ -214,7 +219,7 @@
             $('#type').val(data.type);
             $('#period').val(data.period);
             $('#price').val(data.price);
-            $(`#status option[value='${data.status}']`).prop('selected', true); 
+            $(`#status option[value='${data.status}']`).prop('selected', true);
         })
     });
     $('body').on('click', '#showDeleteModelCategory', function() {

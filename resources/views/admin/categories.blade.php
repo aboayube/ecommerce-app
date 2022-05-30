@@ -1,16 +1,17 @@
 @extends('layouts.app')
-
-@section('content')
-@foreach ($errors->all() as $error)
-<li>{{ $error }}</li>
-@endforeach
-
+@section('title')
 <div class="app-title">
     <div>
-        <h1><i class="fa fa-th-list"></i>اقسام</h1>
+        <h1><i class="fa fa-th-list"></i>تصنيفات</h1>
     </div>
 
 </div>
+
+@endsection
+@section('content')
+
+
+
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">
@@ -18,12 +19,15 @@
             <div class="card-header pb-0">
                 <div class="d-flex justify-content-between">
 
-                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة قسم</a>
+                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة تصنيف</a>
                 </div>
             </div>
             <div class="card-body">
                 <div class="tile-body">
                     <div class="table-responsive">
+                        @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{ $error }}</div>
+                        @endforeach
                         <table class="table table-hover table-bordered table-arabic" id="sampleTable">
                             <thead>
                                 <tr>
@@ -31,7 +35,7 @@
                                     <th>اسم</th>
                                     <th>اسم en</th>
                                     <th>صورة</th>
-                                    <th>قسم الرئيسي</th>
+                                    <th>تصنيف الرئيسي</th>
                                     <th>مستخدم</th>
                                     <th>حالة</th>
                                     <th>action</th>
@@ -104,12 +108,12 @@
                     </div>
 
                     <div class="form-group">
-                    <label for="exampleInputEmail1">حالة القسم</label>
-                    <select class="form-control" name="status" id="status">
-                        <option value="0">غير مفعل</option>
-                        <option value="1">مفعل</option>
+                        <label for="exampleInputEmail1">حالة القسم</label>
+                        <select class="form-control" name="status" id="status">
+                            <option value="0">غير مفعل</option>
+                            <option value="1">مفعل</option>
 
-                    </select>
+                        </select>
                     </div>
 
                     <div class="modal-footer">

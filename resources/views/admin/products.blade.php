@@ -1,16 +1,14 @@
 @extends('layouts.app')
-@section('content')
+@section('title')
+<div class="app-title">
+    <div>
+        <h1><i class="fa fa-th-list"></i>المنتجات</h1>
+    </div>
 
-<!-- row -->
-@if ($errors->any())
-<div class="alert alert-danger">
-    <ul>
-        @foreach ($errors->all() as $error)
-        <li>{{ $error }}</li>
-        @endforeach
-    </ul>
 </div>
-@endif
+
+@endsection
+@section('content')
 <div class="row">
     <div class="col-xl-12">
         <div class="card mg-b-20">

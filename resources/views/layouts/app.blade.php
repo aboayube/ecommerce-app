@@ -94,6 +94,7 @@
                     <li><a class="treeview-item" href="{{route('admin.advertisementUsers.index')}}"><i class="icon fa fa-circle-o"></i>advertisements User</a></li>
                     <li><a class="treeview-item" href="{{route('admin.products.index')}}"><i class="icon fa fa-circle-o"></i> products</a></li>
                     <li><a class="treeview-item" href="{{route('admin.productdetails.index')}}"><i class="icon fa fa-circle-o"></i> منتجات الفرعية</a></li>
+                    <li><a class="app-menu__item" href="{{route('admin.productuser.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">عمليات شراء مستخدمين</span></a></li>
 
                 </ul>
             </li>
@@ -117,16 +118,16 @@
             <li><a class="app-menu__item" href="{{route('admin.settings.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">settings</span></a></li>
             <li><a class="app-menu__item" href="{{route('admin.productdetialsInputs.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">productdetialsInputs</span></a></li>
             <li><a class="app-menu__item" href="{{route('admin.payments.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">عمليات الدفع</span></a></li>
-            <li><a class="app-menu__item" href="{{route('admin.productuser.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">عمليات الدفع مستخدمين</span></a></li>
             <li><a class="app-menu__item" href="{{route('admin.reviewproducts.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">تقييمات المنتج من قبل المستخدمين</span></a></li>
             <li><a class="app-menu__item" href="{{route('admin.reviewsalers.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label">تقييمات التاجر من قبل المستخدمين</span></a></li>
             <li><a class="app-menu__item" href="{{route('admin.colors.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label"> اللون منتجات</span></a></li>
+            <li><a class="app-menu__item" href="{{route('admin.conversations.index')}}"><i class="app-menu__icon fa fa-file-code-o"></i><span class="app-menu__label"> محادثات</span></a></li>
         </ul>
     </aside>
     <main class="app-content">
+        @yield('title')
         @yield('content')
     </main>
     @include('sweetalert::alert')
     @include('layouts.footer')
     @stack('scripts')
-    

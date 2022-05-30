@@ -1,16 +1,17 @@
 @extends('layouts.app')
-
-@section('content')
-@foreach ($errors->all() as $error)
-<li>{{ $error }}</li>
-@endforeach
-
+@section('title')
 <div class="app-title">
     <div>
-        <h1><i class="fa fa-th-list"></i>اقسام</h1>
+        <h1><i class="fa fa-th-list"></i>الوان المتاحة للمنتجات</h1>
     </div>
 
 </div>
+
+@endsection
+@section('content')
+
+
+
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">
@@ -24,6 +25,9 @@
             <div class="card-body">
                 <div class="tile-body">
                     <div class="table-responsive">
+                        @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{ $error }}</div>
+                        @endforeach
                         <table class="table table-hover table-bordered table-arabic" id="sampleTable">
                             <thead>
                                 <tr>
@@ -39,7 +43,7 @@
                                 <tr>
                                     <td>{{$loop->iteration }}</td>
 
-                                    <td style="background-color:rgb({{ $color->name }})">sad</td>
+                                    <td style="background-color:{{ $color->name }}">sad</td>
                                     <td>{{ $color->status ? 'مفعل':'غير مفعل'}}</td>
 
                                     <td>{{ $color->user->name }}</td>
@@ -62,8 +66,6 @@
         </div>
     </div>
 </div>
-
-
 <div class="modal" id="modaldemo8">
     <div class="modal-dialog" role="document">
         <div class="modal-content modal-content-demo">

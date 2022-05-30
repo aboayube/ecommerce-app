@@ -1,4 +1,13 @@
 @extends('layouts.app')
+@section('title')
+<div class="app-title">
+    <div>
+        <h1><i class="fa fa-th-list"></i>قيم متغيرة للمنتج </h1>
+    </div>
+
+</div>
+
+@endsection
 @section('content')
 <style>
     .table-responsive {

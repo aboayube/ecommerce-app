@@ -1,16 +1,15 @@
 @extends('layouts.app')
-
-@section('content')
-@foreach ($errors->all() as $error)
-<li>{{ $error }}</li>
-@endforeach
-
+@section('title')
 <div class="app-title">
     <div>
         <h1><i class="fa fa-th-list"></i>اقسام</h1>
     </div>
 
 </div>
+
+@endsection
+@section('content')
+
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">
@@ -24,12 +23,15 @@
             <div class="card-body">
                 <div class="tile-body">
                     <div class="table-responsive">
+                        @foreach ($errors->all() as $error)
+                        <div class="alert alert-danger">{{ $error }}</div>
+                        @endforeach
                         <table class="table table-hover table-bordered table-arabic" id="sampleTable">
                             <thead>
                                 <tr>
                                     <th>id</th>
-                                    <th>اسم</th>
-                                    <th>اسم en</th>
+                                    <th>قسم</th>
+                                    <th>قسم en</th>
                                     <th>مستخدم</th>
                                     <th>حالة</th>
                                     <th>action</th>

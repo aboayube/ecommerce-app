@@ -1,16 +1,18 @@
 @extends('layouts.app')
-
-@section('content')
-@foreach ($errors->all() as $error)
-<li>{{ $error }}</li>
-@endforeach
-
+@section('title')
 <div class="app-title">
     <div>
         <h1><i class="fa fa-th-list"></i>شاشات Onslashs</h1>
     </div>
 
 </div>
+
+@endsection
+@section('content')
+@foreach ($errors->all() as $error)
+<li>{{ $error }}</li>
+@endforeach
+
 <!-- row -->
 <div class="row">
     <div class="col-xl-12">
@@ -18,7 +20,7 @@
             <div class="card-header pb-0">
                 <div class="d-flex justify-content-between">
 
-                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة قسم</a>
+                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة شاشة</a>
                 </div>
             </div>
             <div class="card-body">

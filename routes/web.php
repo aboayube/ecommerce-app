@@ -82,7 +82,7 @@ Route::group(
                     Route::post('/delete', [UserController::class, 'destroy'])->name('delete');
                 });
 
-                //salers
+                    //salers
                 Route::group([
                     'prefix' => '/sellers',
                     'as' => 'sellers.'
