@@ -51,8 +51,6 @@ Route::group(
         Route::post("ratting/sallers/{prouduct_id}", [App\Http\Controllers\Api\RattingController::class, 'ratingSallar']);
         Route::post("ratting/product/{prouduct_id}", [App\Http\Controllers\Api\RattingController::class, 'ratingProudct']);
 
-        // reset password
-        Route::post('respassword', [App\Http\Controllers\Api\RegisterUserController::class, 'respassword']);
 
         //logout
         Route::post("logout", [App\Http\Controllers\Api\RegisterUserController::class, 'logout']);
@@ -73,3 +71,5 @@ Route::get('/index/{lang}', [App\Http\Controllers\Api\GeneralApi::class, 'index'
 Route::get("colorsproducts", [App\Http\Controllers\Api\GeneralApi::class, 'getColors']);
 Route::get("productsInput/{lang}", [App\Http\Controllers\Api\GeneralApi::class, 'productsInput']);
 Route::get('advertisement', [App\Http\Controllers\Api\GeneralApi::class, 'advertisement']);
+// reset password
+Route::post('respassword', [App\Http\Controllers\Api\RegisterUserController::class, 'respassword']);

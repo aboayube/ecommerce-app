@@ -19,7 +19,7 @@
             <div class="card-header pb-0">
                 <div class="d-flex justify-content-between">
 
-                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة قسم</a>
+                    <a class="modal-effect btn btn-outline-primary btn-block" data-effect="effect-scale" data-toggle="modal" href="#modaldemo8">اضافة لون</a>
                 </div>
             </div>
             <div class="card-body">
@@ -110,7 +110,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">تعديل القسم</h5>
+                <h5 class="modal-title" id="exampleModalLabel">تعديل لون</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -127,7 +127,7 @@
                         <input type="color" name="color" id="colorEdit">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">حالة القسم</label>
+                        <label for="exampleInputEmail1">حالة لون</label>
                         <select class="form-control" name="status" id="status">
                             <option value="0">غير مفعل</option>
                             <option value="1">مفعل</option>
@@ -153,7 +153,7 @@
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-content-demo">
             <div class="modal-header">
-                <h6 class="modal-title">حذف القسم</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
+                <h6 class="modal-title">حذف لون</h6><button aria-label="Close" class="close" data-dismiss="modal" type="button"><span aria-hidden="true">&times;</span></button>
             </div>
             <form action="{{route('admin.colors.delete')}}" method="POST">
 

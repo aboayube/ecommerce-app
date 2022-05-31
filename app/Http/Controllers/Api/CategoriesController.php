@@ -27,7 +27,7 @@ class CategoriesController extends Controller
         if ($categories->count() > 0) {
             return response()->json(['error' => false, 'data' => CategoriesResource::collection($categories), 'status' => 200]);
         } else {
-            return response()->json(['error' => true, 'message' => 'No wasfas found', 'status' => 200],);
+            return response()->json(['error' => true, 'message' => 'No there child categories found', 'status' => 200],);
         }
     }
 }

@@ -14,8 +14,10 @@
             <div class="messanger">
                 <div class="messages">
                     @foreach($messages as $msg)
-
-                    {{--$from_id =$msg->from_id}}
+                    @php
+                    $from_id = $msg->from_id;
+                    dd($from_id)
+                    @end
 
                     @if($msg->from_id == auth()->id())
                     <div class="message"><img src="{{asset('assets/users/'.$msg->from->image)}}" width="50px" height="50px">

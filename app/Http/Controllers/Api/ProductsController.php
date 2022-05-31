@@ -91,7 +91,7 @@ class ProductsController extends Controller
 
             if ($product) {
                 DB::commit();
-                return response()->json(['errors' => false, 'message' => 'تم اضافة المنتج بنجاح'], 200);
+                return response()->json(['errors' => false, 'message' => $product], 200);
             }
 
             DB::commit();
