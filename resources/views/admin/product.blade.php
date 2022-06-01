@@ -32,7 +32,7 @@
                         <span>{{$product->whatsapp}}</span><br><br>
                         <span>{{$product->type}}</span><br><br>
                         <span>{{$product->category->name}}</span><br><br>
-                        <span>{{$product->department->name}}</span><br><br>
+                        <span>{{$product->department->name??''}}</span><br><br>
                         <span>{{$product->product_number}}</span><br><br>
 
                         <p>url <a href="{{$product->url}}">view<a></p>

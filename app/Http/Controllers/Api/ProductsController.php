@@ -37,6 +37,7 @@ class ProductsController extends Controller
             'phone' => "required",
             'whatsapp' => "required",
             'image' => "required|image",
+            'email' => "required",
             'sentence_price' => 'required',
             'price' => 'required',
             'now_price' => 'required',
@@ -62,6 +63,7 @@ class ProductsController extends Controller
                 'name' => $request->post('name'),
                 'name_en' => $request->post('name_en'),
                 'product_number' => $request->post('product_number'),
+                'email' => $request->post('email'),
                 'image' => $filename,
                 'discription' => $request->post('discription'),
                 'discription_en' => $request->post('discription_en'),
@@ -111,9 +113,6 @@ class ProductsController extends Controller
             return response()->json(['errors' => true, 'message' => 'product not found'], 200);
         }
     }
-
-
-
     public function addProductdetails(Request $request, $prouduct_id)
     {
 

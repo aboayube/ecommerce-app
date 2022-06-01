@@ -18,6 +18,7 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->string('name_en');
             $table->string('image');
+            $table->string('email');
             $table->string('product_number');
             $table->string('discription');
             $table->string('discription_en');

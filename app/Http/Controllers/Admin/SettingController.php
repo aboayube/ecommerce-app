@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Helpers\ImageClass;
 use App\Http\Controllers\Controller;
-use App\Models\Setting;
+use App\Models\setting;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Stevebauman\Purify\Facades\Purify;
